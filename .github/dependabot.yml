@@ -1,0 +1,75 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directories:
+      - "/adk/llama/vllm/deploy-agent"
+      - "/adk/memory/adk-app"
+      - "/adk/ray-mcp/adk_agent"
+      - "/adk/ray-mcp/mcp_server"
+      - "/adk/vertex/app"
+      - "/agentic-llamaindex/rag/app"
+      - "/batch-inference-pytorch"
+      - "/benchmarks/agent-sandbox"
+      - "/benchmarks/pod-snapshots/images/exporter"
+      - "/benchmarks/pod-snapshots/images/helper"
+      - "/benchmarks/pod-snapshots/images/httpcheck"
+      - "/confidential-gke/sample-app"
+      - "/dws-flex-training-pytorch/torch"
+      - "/finetuning-gemma-3-1b-it-on-l4"
+      - "/inference-servers/checkpoints"
+      - "/inference-servers/jetstream/http-server"
+      - "/inference-servers/jetstream/maxtext/maxengine-server"
+      - "/inference-servers/jetstream/pytorch/jetstream-pytorch-server"
+      - "/inference-servers/maxdiffusion/build/server"
+      - "/inference-servers/maxdiffusion/build/webapp"
+      - "/langchain-chatbot/app"
+      - "/llamaindex/rag/app"
+      - "/metaflow/finetune_inside_metaflow/image"
+      - "/mlflow/finetune-gemma/deploy-gemma2/simple"
+      - "/mlflow/finetune-gemma/finetune"
+      - "/models-as-oci"
+      - "/ray-serve/adk_agent"
+      - "/ray-serve/ray-serve-vllm"
+      - "/security/llama-firewall/adk-app"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "security"
+
+  - package-ecosystem: "gomod"
+    directory: "/confidential-gke/sample-app"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "security"
+
+  - package-ecosystem: "pip"
+    directories:
+      - "/adk/llama/vllm/deploy-agent"
+      - "/adk/memory/adk-app"
+      - "/adk/ray-mcp/adk_agent"
+      - "/adk/ray-mcp/mcp_server"
+      - "/adk/vertex/app"
+      - "/agentic-llamaindex/rag/app"
+      - "/benchmarks/pod-snapshots/images/exporter"
+      - "/benchmarks/pod-snapshots/images/helper"
+      - "/ci-resources/scheduling"
+      - "/inference-servers/maxdiffusion/build/server"
+      - "/inference-servers/maxdiffusion/build/webapp"
+      - "/langchain-chatbot/app"
+      - "/llamaindex/rag/app"
+      - "/metaflow/finetune_inside_metaflow/image"
+      - "/ray-serve/adk_agent"
+      - "/security/llama-firewall/adk-app"
+      - "/skypilot-dws-kueue/text-classification"
+      - "/skypilot/text-classification"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "security"
